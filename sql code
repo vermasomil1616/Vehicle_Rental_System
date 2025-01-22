@@ -1,0 +1,25 @@
+CREATE DATABASE vehicle_rental;
+USE vehicle_rental;
+CREATE TABLE vehicles (
+     reg_no VARCHAR(20) PRIMARY KEY,
+     make VARCHAR(50),
+    model VARCHAR(50),
+     year INT,
+     available BOOLEAN
+ ); 
+ INSERT INTO vehicles (reg_no, make, model, year, available)
+ VALUES 
+ ('UP15AB4578', 'Toyota', 'Corolla', 2019, TRUE),
+ ('UP16KL5455', 'Honda', 'Civic', 2020, TRUE),
+ ('HR26EY0001', 'Ford', 'Focus', 2018, TRUE),
+ ('UP78HK5400', 'Chevrolet', 'Malibu', 2021, TRUE),
+ ('UP31ES1079', 'BMW', 'X5', 2022, TRUE),
+ ('UP16HJ1000', 'Audi', 'A4', 2020, TRUE),
+ ('UP17MY6798', 'Mercedes', 'C-Class', 2019, TRUE),
+ ('HR26MN8722', 'Hyundai', 'Elantra', 2021, TRUE),
+ ('UP16GH6765', 'Kia', 'Optima', 2022, TRUE),
+ ('DL33KL3456', 'Nissan', 'Altima', 2020, TRUE);
+show tables;
+SELECT * FROM vehicles;
+SHOW OPEN TABLES WHERE In_use > 0;
+UNLOCK TABLES
